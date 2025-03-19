@@ -66,7 +66,7 @@ function Login() {
     return (
         <div className="flex h-[100vh]  items-center justify-center ">
             <img src={loginSvg} className='fixed -left-100 top-0 -z-10 opacity-90'/>
-            <form className='flex flex-col items-center justify-center w-1/4    '>
+            <form className='flex flex-col items-center justify-center w-1/4 ' method='POST' onSubmit={handleSubmit}>
                 <motion.p
                     variants={varaints}
                     initial="hidden"
@@ -82,7 +82,7 @@ function Login() {
                     <label htmlFor='email'>Email</label>
                     <input type="email"
                         className='border border-[#D1D1D1] text-sm px-1 py-2 w-full  rounded outline-none'
-                        placeholder="exemplo@email.com"
+                        placeholder="exemple@email.com"
                         name='email'
                         value={informations.email}
                         onChange={handleChange} />

@@ -18,6 +18,9 @@ class AuthController extends Controller
             'name' => 'required|unique:users',
             'email' => 'required|unique:users|email',
             'password' => 'required|confirmed|min:6',
+            'phone' => 'required|unique:users',
+            'nationality' => 'required',
+            'date_of_birth' => 'required|date',
         ]);
         if ($isValidated->fails()) {
             return response()->json(['errors' => $isValidated->errors()], 422);
@@ -27,6 +30,9 @@ class AuthController extends Controller
         $users->name = $validatedData['name'];
         $users->email = $validatedData['email'];
         $users->password = Hash::make($validatedData['password']);
+        $users->phone = $validatedData['phone'];
+        $users->nationality = $validatedData['nationality'];
+        $users->date_of_birth = $validatedData['date_of_birth'];	
         $users->save();
         return response()->json(['success' => 'You have successfully registered'], 201);
     }

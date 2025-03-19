@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 // import Alert from "../components/Alert";
 import leftCircle from "../assets/Ellipse 1.svg";
-import rightCircle from "../assets/Ellipse 2.svg";
+import rightCircle from "../assets/Subtract.svg";
 import { LiaEyeSolid } from "react-icons/lia";
 import { LiaEyeSlashSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";

@@ -15,16 +15,19 @@ class AuthController extends Controller
     {
         //
         $isValidated = Validator::make($request->all(), [
-            'name' => 'required|unique:users', 
-            'email' => 'required|unique:users|email',
+            'name' => 'required|string|max:255|unique:users', 
+            'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
-            'phone' => 'required|unique:users',
-            'nationality' => 'required',
-            'date_of_birth' => 'required|date',
+            'phone' => 'required|string|unique:users|regex:/^\+?\d{10,15}$/',
+            'nationality' => 'required|string|max:100',
+            'date_of_birth' => 'required|date|before:today',
+            'gender' => 'required',
         ]);
+
         if ($isValidated->fails()) {
             return response()->json(['errors' => $isValidated->errors()], 422);
         }
+
         $validatedData = $isValidated->validated();
         $users = new User();
         $users->name = $validatedData['name'];
@@ -32,7 +35,8 @@ class AuthController extends Controller
         $users->password = Hash::make($validatedData['password']);
         $users->phone = $validatedData['phone'];
         $users->nationality = $validatedData['nationality'];
-        $users->date_of_birth = $validatedData['date_of_birth'];	
+        $users->date_of_birth = $validatedData['date_of_birth'];
+        $users->gender = $validatedData['gender'];	
         $users->save();
         return response()->json(['success' => 'You have successfully registered'], 201);
     }
@@ -43,9 +47,9 @@ class AuthController extends Controller
             'password' => 'required',
         ])->validated();
     
-        if (Auth::attempt($validated)) { // Use Auth::attempt()
-            $user = Auth::user(); // Get the authenticated user
-            $token = $user->createToken('auth_token')->plainTextToken; // Create a token
+        if (Auth::attempt($validated)) {
+            $user = Auth::user(); 
+            $token = $user->createToken('auth_token')->plainTextToken; 
     
             return response()->json([
                 'message' => 'Login successful',

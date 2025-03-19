@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone')->unique()->nullable();
             $table->string('nationality');
-            $table->enum('sexe',['male', 'female']);
+            $table->enum('gender',['male', 'female']);
             $table->date('date_of_birth');
             $table->string('password');
             $table->enum('role', ['job_seeker', 'employer', 'admin'])->default('job_seeker');

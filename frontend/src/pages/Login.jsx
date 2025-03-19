@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import loginSvg from "../assets/loginSvg.svg";
 import { motion } from "motion/react";
 import { request } from "../utils/apiUtils";

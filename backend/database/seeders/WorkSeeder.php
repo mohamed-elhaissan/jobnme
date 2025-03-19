@@ -23,7 +23,7 @@ class WorkSeeder extends Seeder
             [
                 'name' => 'Construction Manager',
                 'description' => 'Responsible for overseeing and managing construction projects, ensuring that projects are completed on time and within budget.',
-                'type' => 'In-Person',
+                'type' => 'Online',
                 'category' => 'Construction',
                 'status' => 'Open',
                 'location' => 'Casablanca',
@@ -32,7 +32,7 @@ class WorkSeeder extends Seeder
             [
                 'name' => 'Registered Nurse',
                 'description' => 'Provides patient care in hospitals, clinics, or other healthcare settings, monitors patient conditions, and administers medications.',
-                'type' => 'In-Person',
+                'type' => 'Online',
                 'category' => 'Healthcare',
                 'status' => 'Open',
                 'location' => 'Rabat',
@@ -41,7 +41,7 @@ class WorkSeeder extends Seeder
             [
                 'name' => 'Hotel Manager',
                 'description' => 'Oversees daily operations of a hotel, manages staff, ensures customer satisfaction, and handles administrative tasks.',
-                'type' => 'In-Person',
+                'type' => 'Online',
                 'category' => 'Hospitality',
                 'status' => 'Closed',
                 'location' => 'Marrakech',
@@ -50,7 +50,7 @@ class WorkSeeder extends Seeder
             [
                 'name' => 'High School Teacher',
                 'description' => 'Teaches various subjects to high school students, plans lessons, evaluates student performance, and fosters a positive learning environment.',
-                'type' => 'In-Person',
+                'type' => 'Online',
                 'category' => 'Education',
                 'status' => 'Open',
                 'location' => 'Tanger',
@@ -68,7 +68,7 @@ class WorkSeeder extends Seeder
             [
                 'name' => 'Social Media Manager',
                 'description' => 'Manages and grows a company’s social media presence by creating and scheduling content, engaging with followers, and analyzing performance.',
-                'type' => 'Remote',
+                'type' => 'Online',
                 'category' => 'Marketing',
                 'status' => 'Open',
                 'location' => 'Fes',
@@ -80,13 +80,13 @@ class WorkSeeder extends Seeder
                 'type' => 'In-Person',
                 'category' => 'Logistics',
                 'status' => 'Open',
-                'location' => 'Meknes',
+                'location' => 'Agadir',
                 'salary' => 8500,
             ],
             [
                 'name' => 'Financial Analyst',
                 'description' => 'Analyzes financial data and provides insights and recommendations to help businesses make informed financial decisions.',
-                'type' => 'Remote',
+                'type' => 'Online',
                 'category' => 'Finance',
                 'status' => 'Closed',
                 'location' => 'Casablanca',
@@ -98,7 +98,7 @@ class WorkSeeder extends Seeder
                 'type' => 'In-Person',
                 'category' => 'Agriculture',
                 'status' => 'Open',
-                'location' => 'Kenitra',
+                'location' => 'Agadir',
                 'salary' => 9500,
             ],
             [
@@ -107,11 +107,9 @@ class WorkSeeder extends Seeder
                 'type' => 'In-Person',
                 'category' => 'Transport',
                 'status' => 'Open',
-                'location' => 'Oujda',
+                'location' => 'Agadir',
                 'salary' => 7500,
             ]
         ]);
     }
 }
-
-

@@ -1,11 +1,10 @@
-import React, { PureComponent } from 'react'
+import NavBar from '../components/NavBar';
 
-export class Home extends PureComponent {
-  render() {
+
+function Home() {
     return (
-      <div>Welcome</div>
+        <NavBar/>
     )
-  }
 }
+export default Home;
 
-export default Home

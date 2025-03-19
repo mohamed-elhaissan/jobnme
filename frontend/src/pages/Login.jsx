@@ -65,8 +65,8 @@ function Login() {
 
     return (
         <div className="flex h-[100vh]  items-center justify-center ">
-            <img src={loginSvg} className='fixed -left-120 top-0 -z-10 opacity-90' />
-            <form className='flex flex-col items-center justify-center w-1/4  ' method='POST' onSubmit={handleSubmit}>
+            <img src={loginSvg} className='fixed -left-100 top-0 -z-10 opacity-90'/>
+            <form className='flex flex-col items-center justify-center w-1/4    '>
                 <motion.p
                     variants={varaints}
                     initial="hidden"

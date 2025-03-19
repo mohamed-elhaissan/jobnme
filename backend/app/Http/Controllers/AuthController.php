@@ -15,7 +15,7 @@ class AuthController extends Controller
     {
         //
         $isValidated = Validator::make($request->all(), [
-            'name' => 'required|unique:users',
+            'name' => 'required|unique:users', 
             'email' => 'required|unique:users|email',
             'password' => 'required|confirmed|min:6',
             'phone' => 'required|unique:users',

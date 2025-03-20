@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import './NavBar.css';
+import { BsPersonCircle } from "react-icons/bs";
+import { LuLogOut } from "react-icons/lu";
 import { useState } from "react";
 function NavBar() {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -18,11 +20,7 @@ function NavBar() {
                 </ul>
             </div>
             <div className="profile">
-                <ion-icon
-                    className="prof"
-                    name="person-circle-outline"
-                    onClick={() => setShowDropdown(!showDropdown)}
-                ></ion-icon>
+            <BsPersonCircle className="prof" onClick={() => setShowDropdown(!showDropdown)}/>
 
                 {showDropdown && (
                     <div className="dropdown-menu">
@@ -30,7 +28,7 @@ function NavBar() {
                             <button className="dropdown-btn">Profile</button>
                         </Link>
                         <hr />
-                        <ion-icon  className="dropdown-btn" name="log-out-outline"></ion-icon>
+                        <LuLogOut className="dropdown-btn" />
                     </div>
                 )}
             </div>

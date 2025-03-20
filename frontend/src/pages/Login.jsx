@@ -219,7 +219,17 @@ export default function Login() {
                 >
                     Login
                 </motion.button>
-                <Link to={"register"}></Link>
+                <motion.div
+                    variants={varaints}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{
+                        delay: 0.7,
+                        ease: [0.25, 0.1, 0.25, 1], // Smooth cubic bezier easing
+                    }}
+                    className="mb-5">
+                    <Link to={"/register"} className="mb-2 text-sm text-slate-500 hover:text-black ">you don't have an account?</Link>
+                </motion.div>
             </form>
         </div>
     );
